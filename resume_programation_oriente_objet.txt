@@ -1,0 +1,95 @@
+OBJET : PARADIGME PROGRAMATION
+            => Programation procédurale
+            => Programation orienté-objet (POO)
+
+Paradigme de Programation: est une façon d'approcher la programation informatique (procédurale ou POO)
+Méthode de Programation: est une manière d'organiser la solution des problèmes spécifiques du génie logiciel
+-----------------------------------------------------------------------------
+                          Programation procédurale
+-----------------------------------------------------------------------------
+- Afficher du texte
+- Saisir des information sur clavier => création de menu
+- Travailler sur les variables
+- Conditions et boucles
+- Fonctions
+- Modulrité => utiliser des module (fichier) qui contient des fonctions à utilisés dans d'autre scripts
+- Géstion des erreurs avec Try / except / else / finally 
+
+-----------------------------------------------------------------------------
+                        Programation orienté-objet (POO)
+-----------------------------------------------------------------------------
+Classe              : c'est comme un plan de conception (ex : être Humain)
+
+Objet               : C'est une instance de la classe c'est à dire une copie ou un produit 
+                        ou création de la classe (ex : Julien) => Julien est un objet de class Humain
+
+Attribut            : C'est un variable de classe (ex : pour un Humain est caractérisé pas un nom, age, sexe, taille, ...)
+Proprieté           : manière de manipuler les attributs(lecture seule, accès non autorisé en dehors de la classe)
+
+Méthode             : fonction d'une classe (procedure sans return) ou bien action donc un verbe 
+                        => ex : methode manger(quantité, nourriture), marcher 
+Méthode de classe   : fonction d'une classe
+Méthode statique    : fonction d'une classe mais indépendante de celle-ci 
+                        ==> classe utilitaire qu'on ne va jamais l'intancier
+                        
+Héritage            : Classe Fille qui hérite d'une classe Mère (fille est une sorte de mère)
+                        ==> classe Chat hérite de la classe Animal (Chat est une sorte d'Animal)
+
+
+EXEMPLE DE CLASSES:
+==================
+        ----------------------------------------------------------------------------------------------------------
+         * humain.py      
+                    - Définition de classe
+                    - Création de classe avec des valeurs par défaut (des attributs par defaut)
+                    - Instantiation de classe 
+        ----------------------------------------------------------------------------------------------------------
+         * voiture.py 
+                    - Définition de la classe voiture
+                    - Création de classe Voiture avec comme 
+                            + atributs objet  marque + modele +couleur
+                            + atribut classe  numeroVoiture
+                    - Instantiation de classe 
+                            + PEUGEOT - 308    - BLANC
+                            + RENAULT - SCENIC - NOIRE
+
+                    exp : classe = Voiture
+                            atributs d'objet  : cMarque, cModele et cCouleur 
+                            atribut de classe : numeroVoiture
+        ----------------------------------------------------------------------------------------------------------
+         * personne.py 
+                    - Création de la classe Personne avec :
+                            + attributs nom et age
+                            + methode parler / change de ville / afficher un message
+
+                    - (1) Méthode           : fonction sur une instance c'est à dire fonction d'objet
+                    - (2) Méthode de classe : fonction sur une classe
+                                                lorsqu'on donne un attribut à la classe avec une initialisation et ensuite on veux le changer
+                                                exp : on va créer des personne OBJETS qui habite à Morsange sur orge ensuite on veux créer d'autres 
+                                                        OBJET qui habite à paris.
+                                                        donc l'atrribut  lieuHabitation va changer 
+                    - (3) Méthode statique  : fonction indépendante mais "lié" à une classe 
+                                                    c'est une méthode utilitaire on l'appelle sans créer un objet de la classe 
+        ----------------------------------------------------------------------------------------------------------
+         * femme.py 
+                    + Propriétés d'encapsulation <=> contrôler l'accé au attribut d'une classe avec des getter et des setter
+                    + propriété : manière de manipuler et contrôler des attributs => principe d'encapsulation
+                    + encapsulation d'une propriété avec des <getter>  <setter> <deleter>  <helper>
+                    + exp : on veut contrôler l'age d'une femme c'est à dire 
+                            - changer l'age
+                            - modifier
+                            - mettre des condition    
+                    + getter et setter s'appellent aussi des accesseurs / mutateurs  
+        ----------------------------------------------------------------------------------------------------------
+         * vehicule.py => 
+                    - Héritage
+                        + classe mère est Vehicule
+                        + classe fille est Voiture
+                        ==> voiture hérite de véhicule ou bien voiture est une sorte de véhicule
+                        + classe fille avion
+                    
+                    - Fonctions utiles
+                        + isinstance(<objet>, <classe>) : vérifie qu'un objet est de la classe renseignéé. Si oui donc True si non False
+                        + issubclass(<classe_fille>, <classe_mer>) : vérifie qu'une classe est fille d'une autre
+        ----------------------------------------------------------------------------------------------------------
+         * .py => 
